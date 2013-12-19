@@ -39,17 +39,16 @@
             color:red;   
         }
 	</style>
+    <script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
     <script>
        function changeColor(color){
-         document.getElementById('body').className=color;
+         $('#body').attr('class', color);  
        }
        function readability(mode){
-        var header = document.getElementById('header');
-         var nav = document.getElementById('nav');
-         if(mode){             
-             header.style.display = nav.style.display = 'none';
+         if(mode){                          
+             $('#header, #nav').hide();
          } else {
-             header.style.display = nav.style.display = 'block';
+             $('#header, #nav').show();
          }
        }
     </script>
